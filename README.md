@@ -3,7 +3,7 @@
 Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 
 ### 1. Introdução aos sistemas Web:<br>
-- [ ] Internet e comércio eletrônico: um resumo histórico;<br>
+- [x] Internet e comércio eletrônico: um resumo histórico;<br>
 - [ ] Fundamentos da Internet: conceitos básicos, protocolos e tecnologias;<br>
 - [ ] Sistemas estáticos x sistemas dinâmicos;<br>
 - [ ] Arquiteturas de sistemas Web;<br>
