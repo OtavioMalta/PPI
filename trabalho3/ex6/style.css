@@ -1,0 +1,49 @@
+input:invalid + span:after{
+        content: 'X';
+        color: red;
+}
+input:valid + span:after{
+    content: '✓';
+    color: green;
+}
+main{
+    padding: 30px;
+    background-color: rgb(243, 238, 238);
+    font-family: "Helvetica Neue";
+    line-height: 1.5;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.398);
+    font-family: "Helvetica Neue";
+}
+button{
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.398);
+    border: none;
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    background-color: white;
+}
+fieldset{
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.398);
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(214, 211, 211);
+}
+
+input{
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
