@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Ex4</title>
+  <meta charset="UTF-8">
+  <style>
+
+      main{
+          background-color: #ddd;
+          padding: 30px 40px;
+          border-radius: 5px;
+          text-align: center;
+          position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+
+    li{
+        width: 230px;
+        padding: 5px 10px 5px 20px;
+        margin: 3px;
+        background-color: rgb(189, 217, 240);
+        border: 0.5px solid rgb(70, 67, 212);
+        border-radius: 3px;
+    }
+    li > button{
+        font-size: small;
+        float: right;
+        color: red;
+        border: none;
+        background-color: rgb(189, 217, 240);
+        cursor: pointer;
+    }
+
+  </style>
+
+<script>
+    // Indica que, assim que a página for carregada (incluindo css, imagens e etc), a função será executada
+    window.onload = function () { 
+
+        // Pega o elemento com o id interesse 
+        const campoInteresse = document.querySelector("#interesse");
+
+        //Indica que, quando o elemento campoInteresse receber uma ação de tecla executará a função
+        campoInteresse.addEventListener('keyup', e =>{
+            // Se a tecla gfor um enter
+            if(e.key === "Enter"){
+                //executa a função addInteresse
+                addInteresse(e);
+            }
+        });
+    }
+
+    function addInteresse(e){
+        // Pega o elemento com o id interesse 
+        const campoInteresse = document.querySelector("#interesse");
+        // Pega o elemento ol
+        const listaInteresse = document.querySelector("ol");
+        // Cria um elemento li
+        const novoLi = document.createElement("li");
+        // Cria um elemento span
+        const novoSpan = document.createElement("span");
+        // Cria um elemento botao
+        const novoBotao = document.createElement("button");
+
+        // O conteúdo do span criado recebe o valor inserido em campoInteresse 
+        novoSpan.textContent = campoInteresse.value;
+
+        // O conteúdo do botao criado recebe o caracter especial ✖
+        novoBotao.textContent = '✖';
+
+        // O li criado recebe o span e o botao como filhos
+        novoLi.appendChild(novoSpan);
+        novoLi.appendChild(novoBotao);
+
+        // A lista (ol) recebe o li criado como filho 
+        listaInteresse.appendChild(novoLi);
+
+        // Quando o novo botao for clickado
+        novoBotao.onclick = () =>{
+            // O novo li é removido de ol
+            novoLi.remove();
+        }
+        // O valor do campo de interesse é zerado para receber um novo valor
+        campoInteresse.value = '';
+    }
+       
+
+  </script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <label for="interesse">Interesse: </label>
+            <input type="text" name="interesse" id="interesse">
+        </div>
+        
+        <ol>
+        </ol>
+        </main>
+</body>
+</html>

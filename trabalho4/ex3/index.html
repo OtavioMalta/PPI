@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Ex3</title>
+  <meta charset="UTF-8">
+  <style>
+      
+    article {
+      width: 200px;
+      height: 200px;
+      background-color: #f5f5f5;
+      float: left;
+      margin: 5px;
+      padding: 5px 15px;
+      font: 2em;
+      border: 1px solid lightgrey;
+      box-shadow: 0px 0px 5px rgb(100, 200, 200);
+    }
+
+  </style>
+
+<script>
+    // Indica que, assim que a página for carregada (incluindo css, imagens e etc), a função será executada
+    window.onload = function () { 
+
+        // Seleciona todos os elementos 'article' e atribui em uma constante 'listaArtigos'
+        const listaArtigos = document.querySelectorAll("article"); 
+
+        //Executa um laço, pegando todos os artigos de listaArtigos, um por um
+        for (let artigo of listaArtigos) {
+
+            //Indica que, quando aquele artigo em espessífico for clicado, seu style mudará
+            //passando a visibilidade para 'hidden'
+            artigo.onclick = () => artigo.style.visibility = 'hidden';
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <main>
+    <article>A</article>
+    <article>B</article>
+    <article>C</article>
+    <article>D</article>
+    <article>E</article>
+    <article>F</article>
+    <article>G</article>
+  </main>
+</body>
+</html>

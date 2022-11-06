@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo JavaScript Tabs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        nav button{
+            border: none;
+            outline: none;
+            padding: 0 10px;
+            background-color: inherit;
+            height: 30px;
+            margin: 0;
+        }
+
+        nav button:hover{
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+
+        }
+
+        button.buttonActive{
+            font-weight: bold;
+            color: blue;
+        }
+
+        .tabs section{
+            display: none;
+        }
+
+        section.tabActive{
+            display: block;
+        }
+
+    </style>
+
+    <script>
+        // Indica que, assim que a página for carregada (incluindo css, imagens e etc), a função será executada
+        window.onload = function(){
+            // Pega todos os botoes em nav e coloca em botoes
+            const buttons = document.querySelectorAll("nav button");
+
+            // Para cada botao em botoes
+            for(let button of buttons){
+                // Adiciona a funcao changeTab quando o botao em especifico for clicado
+                button.addEventListener("click", changeTab);
+            }
+
+            // Abre a aba de index 0
+            openTab(0);
+        }
+
+        function changeTab(e){
+            // Pega o evento o qual a função foi chamada
+            const botaoAcionado = e.target;
+            // Pega o li do botao (parent do botao)
+            const liBotao = botaoAcionado.parentNode;
+            // Pega todos os li e coloca em uma lista(pega o pai do liBotao, e então os filhos do pai)
+            const nodes = Array.from(liBotao.parentNode.children);
+            // Pega o index na lista de liBotao
+            const index = nodes.indexOf(liBotao);
+
+            // Abre a aba com index igual a liBotao
+            openTab(index);
+        }
+
+        function openTab(i){
+            // Pega a aba com a classe .tabActive
+            const tabActive = document.querySelector(".tabActive");
+            // Se a aba estiver vazia
+            if(tabActive !== null){
+                // tabActive fica com a classe zerada, o que faz perder os atributos css ('display: block;')
+                tabActive.className = "";
+            }
+            // Pega o botao com a classe .buttonActive
+            const buttonActive = document.querySelector(".buttonActive");
+            // Se o botao estiver vazio
+            if(buttonActive  !== null){
+                // buttonActive fica com a classe zerada, o que faz perder os atributos css ('font-weight: bold;color: blue;')
+                buttonActive.className = "";
+            }
+            // Coloca a tab e o botao os quais tenham o index igual ao que foi selecionado e atribui a classe 'tabActive' e 'buttonActive' respectivamente
+            document.querySelectorAll(".tabs section")[i].className = "tabActive";
+            document.querySelectorAll("nav button")[i].className = "buttonActive";
+        }
+    </script>
+
+
+</head>
+
+<body>
+    
+    <header>
+
+        <section>
+            <h1>Faculdade de Computação</h1>
+        </section>
+    </header>
+
+    <nav>
+        <section>
+            <ul>
+                <li><button>Ciência da Computação</button>|</li>
+                <li><button>Sistemas de Informação</button>|</li>
+                <li><button>Mestrado</button>|</li>
+                <li><button>Doutorado</button></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+        <div class="tabs">
+            <section>
+                <h2>Bacharelado em Ciência da Computação</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+            </section>
+
+            <section>
+                <h2>Bacharelado em Sistemas de Informação</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+            </section>
+
+            <section>
+                <h2>Mestrado em Ciência da Computação</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+            </section>
+
+            <section>
+                <h2>Doutorado em Ciência da Computação</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quasi facere, 
+                    atque pariatur ducimus in. Dolorum alias tempora ducimus aut distinctio. 
+                    Voluptates perspiciatis cum quod neque similique, ab fugit autem!Lorem</p>
+            </section>
+        </div>
+    </main>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,24 @@
+body {
+    background-color: #ddd;
+    color: #444;
+    font-family: "Helvetica Neue";
+    line-height: 1.5;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+main {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+section {
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: gray;
+}
+h1, h2 {
+    color: rgb(140, 76, 8)
+}

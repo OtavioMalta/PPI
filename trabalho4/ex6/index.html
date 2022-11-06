@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex6</title>
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            // Indica que, assim que a página for carregada (incluindo css, imagens e etc), a função será executada
+            window.onload = function(){
+                //Indica que, assim que o form for submetido, executará a função validaForm
+                document.forms.formCadastro.onsubmit = validaForm;
+            }
+
+            function validaForm(e){
+                // Pega o evento o qual a função foi chamada
+                let form = e.target;
+                // Cria uma variável com o valor true
+                let formValido = true;
+
+                // Pega de form, o proximo elemento 'irmao', no caso o span, do elemento com id usuario
+                const spanUsuario = form.usuario.nextElementSibling;
+                 // Pega de form, o proximo elemento 'irmao', no caso o span, do elemento com id senha
+                const spanSenha = form.senha.nextElementSibling;
+                 // Pega de form, o proximo elemento 'irmao', no caso o span, do elemento com id email
+                const spanEmail = form.email.nextElementSibling;
+
+                //Inicia o conteudo dos spans com """
+                spanUsuario.textContent = "";
+                spanEmail.textContent = "";
+                spanSenha.textContent = "";
+
+                //Se o valor do campo do form com o id 'usuario' estiver zerado
+                if(form.usuario.value === ""){
+                    //O conteudo do span é atribuido
+                    spanUsuario.textContent = "O usuario deve ser preenchido.";
+                    // a variável que indica se o form esta valido é setado como falso
+                    formValido = false;
+                }
+                //Se o valor do campo do form com o id 'senha' estiver zerado
+                if(form.senha.value === ""){
+                    //O conteudo do span é atribuido
+                    spanSenha.textContent = "A senha deve ser preenchida.";
+                    // a variável que indica se o form esta valido é setado como falso
+                    formValido = false;
+                }
+               //Se o valor do campo do form com o id 'email' estiver zerado
+                if(form.email.value === ""){
+                    //O conteudo do span é atribuido
+                    spanEmail.textContent = "O email deve ser preenchido.";
+                    // a variável que indica se o form esta valido é setado como falso
+                    formValido = false;
+                }
+
+                // Retorna a vaariável que indica que o forma está valido(true) ou não (false)
+                return formValido;
+            }
+
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <main>
+            <div class="loginBox">
+                <h1>Cadastro de Usuário</h1>
+            
+                <form name="formCadastro" method="post">
+
+                    <div class="campo">
+                        <label for="usuario">Usuario: </label>
+                        <input type="text" id="usuario" name="usuario">
+                        <span></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha: </label>
+                        <input type="password" id="senha" name="senha">
+                        <span></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email">
+                        <span></span>
+                    </div>
+
+                    <button>Cadastrar</button>
+                </form>
+            </div>
+        </main>
+    </body>
+
+
+</html>
