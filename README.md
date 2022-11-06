@@ -4,14 +4,14 @@ Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 
 ### 1. Introdução aos sistemas Web:<br>
 - [x] Internet e comércio eletrônico: um resumo histórico;<br>
-- [ ] Fundamentos da Internet: conceitos básicos, protocolos e tecnologias;<br>
-- [ ] Sistemas estáticos x sistemas dinâmicos;<br>
-- [ ] Arquiteturas de sistemas Web;<br>
+- [x] Fundamentos da Internet: conceitos básicos, protocolos e tecnologias;<br>
+- [x] Sistemas estáticos x sistemas dinâmicos;<br>
+- [x] Arquiteturas de sistemas Web;<br>
 ### 2. Introdução ao desenvolvimento Web no lado cliente (client-side):<br>
-- [ ] Desenvolvimento de interfaces gráficas para a Web (HTML e CSS);<br>
-- [ ] Modelo de objeto de uma página Web (DOM);<br>
-- [ ] Manipulação de páginas de Internet no lado cliente, incluindo processamento de eventos,<br>
-- [ ] interatividade, formulários e validação (JavaScript);<br>
+- [x] Desenvolvimento de interfaces gráficas para a Web (HTML e CSS);<br>
+- [x] Modelo de objeto de uma página Web (DOM);<br>
+- [x] Manipulação de páginas de Internet no lado cliente, incluindo processamento de eventos,<br>
+- [x] interatividade, formulários e validação (JavaScript);<br>
 - [ ] Aspectos de segurança na Web: Cross Site Scripting (XSS)<br>
 - [ ] Ferramentas e bibliotecas para o aprimoramento de páginas de Internet<br>
 ### 3. Desenvolvimento Web server-side<br>
