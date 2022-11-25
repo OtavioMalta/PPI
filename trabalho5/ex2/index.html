@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <title>Ex2</title>
+        <style>
+            body{
+                padding: 1rem;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <main>
+            <form class="row g-2">
+                <div class="form-floating col-md-9">
+                    <label for="nome" class="form-label">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-9">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="text" class="form-control" id="senha" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-2">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-10">
+                    <label for="endereco" class="form-label">Endereco</label>
+                    <input type="text" class="form-control" id="endereco" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-5">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-5">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-2">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado">
+                        <option> </option>
+                        <option>MG</option>
+                        <option>RJ</option>
+                        <option>SP</option>
+                    </select>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="termos">
+                        <label for="termos" class="form-check-label">Concordo com os termos</label>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                        Cadastrar</button>
+                </div>
+
+            </form>
+        </main>
+    </body>
+</html>
