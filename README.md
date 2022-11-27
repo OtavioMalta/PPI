@@ -12,10 +12,10 @@ Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 - [x] Modelo de objeto de uma página Web (DOM);<br>
 - [x] Manipulação de páginas de Internet no lado cliente, incluindo processamento de eventos,<br>
 - [x] interatividade, formulários e validação (JavaScript);<br>
-- [ ] Aspectos de segurança na Web: Cross Site Scripting (XSS)<br>
-- [ ] Ferramentas e bibliotecas para o aprimoramento de páginas de Internet<br>
+- [x] Aspectos de segurança na Web: Cross Site Scripting (XSS)<br>
+- [x] Ferramentas e bibliotecas para o aprimoramento de páginas de Internet<br>
 ### 3. Desenvolvimento Web server-side<br>
-- [ ] Linguagem para programação no lado servidor;<br>
+- [x] Linguagem para programação no lado servidor;<br>
 - [ ] Processamento de formulários;<br>
 - [ ] Formatos para intercâmbio de dados na Web (XML, JSON);<br>
 - [ ] Comunicação assíncrona entre cliente e servidor (Ajax);<br>
