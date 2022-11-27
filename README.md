@@ -26,3 +26,4 @@ Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 - [ ] Aspectos de segurança: SQL Injection e Prepared Statements;<br>
 - [ ] Transações;<br>
 - [ ] Requisições Ajax e bancos de dados.<br>
+ 
