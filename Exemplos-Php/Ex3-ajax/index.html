@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Desenvolvimento Web com Ajax</title>
+  <head>
+    <meta charset="utf-8">
+    <!-- 1: Tag de responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- 2: Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+      body {
+        padding-top: 2rem;
+      }
+
+      h3 {
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <div class="container">
+    <h3>Preenchendo o endereço com Ajax</h3>
+
+    <form class="row g-3">
+      <div>
+        <label for="cep" class="form-label">Informe o CEP no formato xxxxx-xxx (Ex. 38400-100 ou 38400-200)</label>
+        <input type="text" class="form-control" id="cep" name="cep">
+      </div>
+      <div>
+        <label for="rua" class="form-label">Rua:</label>
+        <input type="text" class="form-control" id="rua" name="rua">
+      </div>
+      <div>
+        <label for="bairro" class="form-label">Bairro:</label>
+        <input type="text" class="form-control" id="bairro" name="bairro">
+      </div>
+      <div>
+        <label for="cidade" class="form-label">Cidade:</label>
+        <input type="text" class="form-control" id="cidade" name="cidade">
+      </div>
+    </form>
+
+  </div>
+
+  <script>
+
+    async function buscaEndereco(cep) {
+
+      if (cep.length != 9) return;
+
+      try {
+        let response = await fetch("busca-endereco.php?cep=" + cep);
+        if (!response.ok) throw new Error(response.statusText);
+        var endereco = await response.json();
+      }
+      catch (error) {
+        console.error(error);
+        return;
+      }
+
+      let form = document.querySelector("form");
+      form.rua.value = endereco.rua;
+      form.bairro.value = endereco.bairro;
+      form.cidade.value = endereco.cidade;
+    }
+
+    window.onload = function () {
+      const inputCep = document.querySelector("#cep");
+      inputCep.onkeyup = () => buscaEndereco(inputCep.value);
+    }
+
+  </script>
+
+</body>
+
+</html>

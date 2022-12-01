@@ -1,0 +1,6 @@
+Fulano1; fulano1@mail.com; 11-1111-1111
+Fulano2; fulano2@mail.com; 22-2222-2222
+Fulano3; fulano3@mail.com; 33-3333-3333
+Fulano4; fulano4@mail.com; 44-4444-4444
+Fulano5; fulano5@mail.com; 55-5555-5555
+<img src="nenhuma" onerror="alert('Te peguei! XSS!')">;ciclano1@mail.com;888-8888-8888
