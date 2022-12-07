@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Q3</title>
+
+        <script>
+        window.onload = function(){
+            const button = document.querySelector("#campoExtra");
+            button.addEventListener("click", adicionarCampoExtra);
+        }
+
+        function adicionarCampoExtra(){
+            const listaCampos = document.querySelector("ol");
+            
+            const novoSpan =  document.createElement("span");
+            const novoCampo = document.createElement("input");
+            const div = document.createElement("div");
+            const novoLi = document.createElement("li");
+
+            novoSpan.textContent = 'CampoExtra';
+            div.appendChild(novoSpan);
+            div.appendChild(novoLi)
+            novoLi.appendChild(novoSpan);
+            novoLi.appendChild(novoCampo);
+            listaCampos.appendChild(novoLi);
+        }
+
+        </script>
+
+        <style>
+            li{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <form method="get" action="cadastroImovel.php">
+                <div>
+                    <label for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                
+                <div>
+                    <label>Tipo do Imóvel: </label>
+                    <select>
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="data">Data construcao: </label>
+                    <input type="date" id="data" name="data">
+                 </div>
+                <div>
+                    <label for="area">Area total: </label>
+                    <input type="number" id="area" name="area">
+                </div>
+
+                <div>
+                    <label for="quartos">Quartos: </label>
+                    <input type="number" id="quartos" name="quartos">
+                </div>
+
+                <div>
+                    <label for="banheiros">Banheiros: </label>
+                    <input type="number" id="banheiros" name="banheiros">
+                </div>
+
+                <div>
+                <label>Outros: </label>
+                    <div>
+                        <label for="outros1">Banheira: </label>
+                        <input type="checkbox" id="outros1" name="outros">
+                        
+                        <label for="outros2">Sacada: </label>
+                        <input type="checkbox" id="outros2" name="outros">
+                        
+                        <label for="outros3">Churrasqueira: </label>
+                        <input type="checkbox" id="outros3" name="outros">
+                    </div>
+                </div>
+                <div>
+                    <label for="descricao">Descricao: </label>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10" maxlength="300"></textarea>
+                </div>
+                
+                <button type="submit">Cadastrar imovel</button>
+                
+            </form>
+            <button id="campoExtra" class="campoExtra">Adicionar campo extra</button>
+            <ol>
+
+            </ol>
+        </main>
+    </body>
+</html>
