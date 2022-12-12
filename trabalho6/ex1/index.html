@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <title>Ex1</title>
+        <style>
+            body{
+                padding: 1rem;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <main>
+            <form class="row g-2" method="post" action="ex1.php">
+
+                <div class="col-sm-12">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade">
+                </div>
+
+                <div class="col-sm-6">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado">
+                        <option> </option>
+                        <option>MG</option>
+                        <option>RJ</option>
+                        <option>SP</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-12">
+                    <label for="logradouro" class="form-label">Logradouro</label>
+                    <input type="text" class="form-control" id="logradouro">
+                </div>
+
+                <div class="col-sm-12">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="bairro">
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>
