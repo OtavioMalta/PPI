@@ -16,7 +16,7 @@ Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 - [x] Ferramentas e bibliotecas para o aprimoramento de páginas de Internet<br>
 ### 3. Desenvolvimento Web server-side<br>
 - [x] Linguagem para programação no lado servidor;<br>
-- [ ] Processamento de formulários;<br>
+- [x] Processamento de formulários;<br>
 - [ ] Formatos para intercâmbio de dados na Web (XML, JSON);<br>
 - [ ] Comunicação assíncrona entre cliente e servidor (Ajax);<br>
 - [ ] Introdução aos serviços web;<br>
