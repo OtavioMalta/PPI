@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <title>Ex4</title>
+        <style>
+            body{
+                padding: 1rem;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <main>
+            <form class="row g-2" action="cadastro.php" method="post">
+                <div class="form-floating col-md-9">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-3">
+                    <label for="sexo" class="form-label">Sexo</label>
+                    <select class="form-select" id="sexo" name="sexo">
+                        <option> </option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-floating col-md-9">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" name="cep" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-9">
+                    <label for="logradouro" class="form-label">Logradouro</label>
+                    <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-6">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder=" ">
+                </div>
+
+                <div class="form-floating col-md-6">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" name="estado">
+                        <option> </option>
+                        <option>MG</option>
+                        <option>SP</option>
+                    </select>
+                </div>
+
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                        Cadastrar</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

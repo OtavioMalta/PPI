@@ -6,12 +6,17 @@ $pdo = mysqlConnect();
 try {
 
   $sql = <<<SQL
-  SELECT estado, logradouro, bairro, cidade, cep
-  FROM endereco
+  SELECT endereco, bairro, cidade, nome, email
+  FROM cliente INNER JOIN endereco_entrega ON cliente.id = id_cliente
   SQL;
+
+  // Neste exemplo não é necessário utilizar prepared statements
+  // porque não há possibilidade de injeção de SQL, 
+  // pois nenhum parâmetro é utilizado na query SQL
   $stmt = $pdo->query($sql);
 } 
 catch (Exception $e) {
+  //error_log($e->getMessage(), 3, 'log.php');
   exit('Ocorreu uma falha: ' . $e->getMessage());
 }
 ?>
@@ -20,9 +25,11 @@ catch (Exception $e) {
 
 <head>
   <meta charset="utf-8">
+  <!-- 1: Tag de responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ex2</title>
+  <title>Bootstrap demo</title>
 
+  <!-- 2: Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
   <style>
@@ -35,38 +42,43 @@ catch (Exception $e) {
 <body>
 
   <div class="container">
-    <h3>Enderecos</h3>
+    <h3>Entregas Programadas</h3>
     <table class="table table-striped table-hover">
       <tr>
-        <th>CEP</th>
-        <th>Logradouro</th>
+        <th>Endereço</th>
         <th>Bairro</th>
         <th>Cidade</th>
-        <th>Estado</th>
+        <th>Nome Cliente</th>
+        <th>Email</th>
       </tr>
 
       <?php
       while ($row = $stmt->fetch()) {
-        $logradouro = htmlspecialchars($row['logradouro']);
+
+        // Limpa os dados produzidos pelo usuário
+        // com possibilidade de ataque XSS
+        $endereco = htmlspecialchars($row['endereco']);
         $bairro = htmlspecialchars($row['bairro']);
         $cidade = htmlspecialchars($row['cidade']);
-        $cep = htmlspecialchars($row['cep']);
-        $estado = htmlspecialchars($row['estado']);
+        $nome = htmlspecialchars($row['nome']);
+        $email = htmlspecialchars($row['email']);
 
         echo <<<HTML
           <tr>
-            <td>$cep</td> 
-            <td>$logradouro</td>
+            <td>$endereco</td>
             <td>$bairro</td>
             <td>$cidade</td>
-            <td>$estado</td>
+            <td>$nome</td> 
+            <td>$email</td>
           </tr>      
         HTML;
       }
       ?>
 
     </table>
-    <a href="index.html">Menu de opções</a>
+    <a href="../index.html">Menu de opções</a>
   </div>
+
 </body>
+
 </html>
