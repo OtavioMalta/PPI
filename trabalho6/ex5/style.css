@@ -1,0 +1,23 @@
+main{
+    background-color: white;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px gray;
+    padding: 50px;
+}
+
+button{
+    width: 100%;
+    height: 30px;
+}
+body{
+    background-color: #ddd;
+}
+input{
+    width: 100%;
+    height: 25px;
+}
