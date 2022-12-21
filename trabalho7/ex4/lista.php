@@ -7,7 +7,7 @@ try {
 
   $sql = <<<SQL
   SELECT nome, peso, altura, tipo_sanguineo
-  FROM paciente INNER JOIN pessoa ON pessoa.codigo = paciente.codigo
+  FROM paciente INNER JOIN pessoa ON pessoa.codigo = paciente.id
   SQL;
 
   $stmt = $pdo->query($sql);
@@ -65,7 +65,7 @@ catch (Exception $e) {
       ?>
 
     </table>
-    <a href="../index.html">Menu de opções</a>
+    <a href="index.html">Menu de opções</a>
   </div>
 
 </body>

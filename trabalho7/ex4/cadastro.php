@@ -23,7 +23,7 @@ $sql1 = <<<SQL
 
 $sql2 = <<<SQL
   INSERT INTO paciente 
-    (peso, altura, tipo_sanguineo, codigo)
+    (peso, altura, tipo_sanguineo, id)
   VALUES (?, ?, ?, ?)
   SQL;
 
@@ -38,12 +38,12 @@ try {
   $idNovaPessoa = $pdo->lastInsertId();
   $stmt2 = $pdo->prepare($sql2);
   if (!$stmt2->execute([
-    $peso, $altura, $tipo_sanguineo, $codigo
+    $peso, $altura, $tipo_sanguineo, $idNovaPessoa
   ])) throw new Exception('Falha na segunda inserção');
 
   $pdo->commit();
 
-  header("location: ../index.html");
+  header("location: index.html");
   exit();
 } 
 catch (Exception $e) {
