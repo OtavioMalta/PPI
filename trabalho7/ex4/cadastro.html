@@ -16,53 +16,75 @@
     <body>
         <main>
             <form class="row g-2" action="cadastro.php" method="post">
-                <div class="form-floating col-md-9">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder=" ">
-                </div>
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div class="form-floating col-md-9">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-3">
-                    <label for="sexo" class="form-label">Sexo</label>
-                    <select class="form-select" id="sexo" name="sexo">
-                        <option> </option>
-                        <option>Feminino</option>
-                        <option>Masculino</option>
-                    </select>
-                </div>
+                    <div class="form-floating col-md-3">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select class="form-select" id="sexo" name="sexo">
+                            <option> </option>
+                            <option>Feminino</option>
+                            <option>Masculino</option>
+                        </select>
+                    </div>
 
-                <div class="form-floating col-md-9">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder=" ">
-                </div>
+                    <div class="form-floating col-md-9">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-3">
-                    <label for="telefone" class="form-label">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder=" ">
-                </div>
+                    <div class="form-floating col-md-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-3">
-                    <label for="cep" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="cep" name="cep" placeholder=" ">
-                </div>
+                    <div class="form-floating col-md-3">
+                        <label for="cep" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cep" name="cep" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-9">
-                    <label for="logradouro" class="form-label">Logradouro</label>
-                    <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder=" ">
-                </div>
+                    <div class="form-floating col-md-9">
+                        <label for="logradouro" class="form-label">Logradouro</label>
+                        <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-6">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder=" ">
-                </div>
+                    <div class="form-floating col-md-6">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cidade" name="cidade" placeholder=" ">
+                    </div>
 
-                <div class="form-floating col-md-6">
-                    <label for="estado" class="form-label">Estado</label>
-                    <select class="form-select" id="estado" name="estado">
-                        <option> </option>
-                        <option>MG</option>
-                        <option>SP</option>
-                    </select>
-                </div>
+                    <div class="form-floating col-md-6">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select class="form-select" id="estado" name="estado">
+                            <option> </option>
+                            <option>MG</option>
+                            <option>SP</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações do Paciente</legend>
+          
+                    <div class="row g-2">
+                      <div class="col-sm-4">
+                        <label for="peso" class="form-label">Peso</label>
+                        <input type="text" name="peso" class="form-control" id="peso">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="altura" class="form-label">Altura</label>
+                        <input type="text" name="altura" class="form-control" id="altura" placeholder="1,7">
+                      </div>
+                      <div class="col-sm-4">
+                        <label for="tipo_sanguineo" class="form-label">Tipo Sanguíneo</label>
+                        <input type="text" name="tipo_sanguineo" class="form-control" id="tipo_sanguineo">
+                      </div>
+                    </div>
+                  </fieldset>
 
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">
