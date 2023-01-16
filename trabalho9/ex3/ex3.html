@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Geolocation</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.5rem;
+      background-color: #ddd;
+      color: #555;
+      margin: 0;
+    }
+
+    main {
+      width: 60%;
+      margin: 0;
+      padding: 2% 4%;
+      background-color: #eee;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <h2>Temperatura Local: <span id="temp">...</span></h2>
+    <h2>Velocidade do Vento: <span id="wind">...</span></h2>
+  </main>
+
+  <script>
+
+    async function buscaClimaLocal() {
+
+      try {
+        // identifica a cidade
+        const response1 = await fetch('https://ipapi.co/json/');
+        if (! response1.ok) throw new Error(response1.statusText);
+        local = await response1.json();
+
+        // busca informações do clima local passando a latitude e a longitude como parâmetro
+        const response2 = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${local.latitude}&longitude=${local.longitude}&current_weather=true`);
+        if (! response2.ok) throw new Error(response2.statusText);
+        clima = await response2.json();
+
+        // apresenta as informações do clima
+        document.getElementById("temp").textContent = clima.current_weather.temperature + '°';
+        document.getElementById("wind").textContent = clima.current_weather.windspeed + ' km/h';
+      }
+      catch (error) {
+        console.log(error);
+        alert('Não foi possível obter a temperatura local');
+      }
+    }
+
+    window.onload = function () {
+      buscaClimaLocal();
+    }
+
+  </script>
+
+</body>
+
+</html>
