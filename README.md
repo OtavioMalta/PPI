@@ -17,13 +17,13 @@ Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 ### 3. Desenvolvimento Web server-side<br>
 - [x] Linguagem para programação no lado servidor;<br>
 - [x] Processamento de formulários;<br>
-- [ ] Formatos para intercâmbio de dados na Web (XML, JSON);<br>
-- [ ] Comunicação assíncrona entre cliente e servidor (Ajax);<br>
-- [ ] Introdução aos serviços web;<br>
-- [ ] Login, cookies e sessões<br>
+- [x] Formatos para intercâmbio de dados na Web (XML, JSON);<br>
+- [x] Comunicação assíncrona entre cliente e servidor (Ajax);<br>
+- [x] Introdução aos serviços web;<br>
+- [x] Login, cookies e sessões<br>
 ### 4. Desenvolvimento Web com banco de dados<br>
-- [ ] Comunicação com servidor de banco de dados;<br>
-- [ ] Aspectos de segurança: SQL Injection e Prepared Statements;<br>
-- [ ] Transações;<br>
-- [ ] Requisições Ajax e bancos de dados.<br>
+- [x] Comunicação com servidor de banco de dados;<br>
+- [x] Aspectos de segurança: SQL Injection e Prepared Statements;<br>
+- [x] Transações;<br>
+- [x] Requisições Ajax e bancos de dados.<br>
  
