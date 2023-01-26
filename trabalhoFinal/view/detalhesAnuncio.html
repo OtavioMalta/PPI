@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/detalhesAnuncio.css">
+    <title>Anuncio</title>
+</head>
+<body>
+    <main>
+        <h1>Notebook Ultra</h1>
+
+        <div id="div1">
+            <div id="slider">
+                <img src="../images/notebook1.jpg" id="notebookImg" alt="imagem notebook" width="400px">
+             </div>
+     
+             <div id="descricao">
+                 <span id="inf">Principais informações sobre o produto: </span>
+                 <ul id="informacoes">
+                     <li>Processador AMD Ryzen 7.</li>
+                     <li>Memória RAM de 16GB.</li>
+                     <li>Resolução de 1920x1080 px.</li>
+                     <li>Placa de vídeo NVIDIA GeForce GTX 1650.</li>
+                     <li>Possui 4 portas USB e porta HDMI.</li>
+                     <li>Com teclado retroiluminado.</li>
+                 </ul>
+             </div>
+
+             <div id="preco"> 
+                <h2>$preco</h2>
+                <button onclick="btnInteresse()" class="btn" id="tenhoInteresse">Tenho Interesse</button>
+
+                 <div id="interesse">
+                    <form action="salvarInteresse.php">
+                        <div>
+                            <label for="contato" id="contatoLabel">Contato: </label>
+                            <input id="contato" name="contato" type="text" required>
+                        </div>
+
+                        <div>
+                            <label for="mensagem" id="mensagemLabel">Mensagem: </label>
+                            <textarea id="mensagem" name="mensagem" rows="2" cols="50" maxlength="200"></textarea>
+                        </div>
+
+                       <button class="btn" id="enviarInteresse">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="div2">
+            <h3>Descrição</h3>
+            <p>
+                Um novo nível de jogo é possível com este notebook Acer Aspire Nitro 5 AN515-44, 
+                porque permite que você explore e desfrute de uma melhor qualidade de vídeo e imagens mais imersivas. 
+                Enfrente cada jogo e supere seus objetivos.
+            </p>
+            
+            <p>
+                Tela com alto impacto visual
+                A sua tela de 15.6" e 1920x1080 px de resolução lhe dará cores mais vivas e definidas. Seus filmes e séries 
+                favoritas ganharão vida, obtendo maior qualidade e definição em cada detalhe.
+            </p>
+
+            <p>
+                Eficiência na ponta dos dedos
+                Seu processador AMD Ryzen 7 de 8 núcleos, lhe permitirá executar diversos programas e processos 
+                indispensáveis ​​para se desenvolver no dia a dia, seja no seu trabalho ou nos momentos de lazer em sua casa.
+            </p>
+
+            <p>
+                Unidade sólida poderosa
+                O disco sólido de 512 GB faz o equipo funcionar em alta velocidade e por isso oferece a maior 
+                agilidade para operar com diversos programas.
+            </p>
+
+            <p>
+                Um processador exclusivo para os gráficos
+                Sua placa de vídeo NVIDIA GeForce GTX 1650 torna a este dispositivo numa ótima ferramenta
+                de trabalho para qualquer profissional de design. Ele vai permitir 
+                que você atinja um ótimo desempenho em todos os seus jogos e outras tarefas diárias que
+                requerem processamento gráfico.
+            </p>
+        </div>
+        
+    </main>
+<script src="anuncioScript.js"></script>
+</body>
+</html>

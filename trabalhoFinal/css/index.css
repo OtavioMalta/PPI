@@ -1,0 +1,162 @@
+header {
+  height: 100px;
+  background-color: #A9A9A9;
+  display: block;
+  position: relative;
+}
+
+#header-logo {
+  display: inline;
+  margin-left: 64px;
+  margin-top: 12px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 280px;
+  max-height: 64px;
+  background: #fff;
+  display: inline;
+  border-radius: 24px;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+}
+
+.search-bar input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 14px 10px;
+  font-size: 14px;
+  width: auto;
+  display: inline;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  display: inline;
+}
+
+#search-bar-img {
+  width: 14px;
+  height: 14px;
+}
+
+
+#header-button {
+  display: inline;
+  float: right;
+  margin-right: 64px;
+  width: 160px;
+  height: 48px;
+  margin-top: 25px;
+  background: rgb(66, 70, 77);
+  border-radius: 10px;
+  border: 0;
+  padding: 0 16px;
+  color: #fafafa;
+  transition: background-color 0.2s;
+
+
+}
+
+.card-container {
+  margin-left: 128px;
+  margin-right: 128px;
+  margin-bottom: 48px;
+  display: block;
+  padding: 10px;
+}
+
+.product-card {
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-left: 64px;
+}
+
+.product-card-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 12px;
+}
+
+.product-card-info-container {
+  padding: 5% 25%;
+}
+
+.product-card-description {
+  color: rgb(66, 70, 77);
+}
+
+.product-card-price {
+  margin-top: 16px;
+  color: rgb(66, 70, 77);
+}
+
+product-card-button-container {
+  width: 100%;
+}
+
+.product-card-button {
+  display: block;
+  margin: auto;
+  border: 0;
+  width: 160px;
+  height: 40px;
+  background: rgb(66, 70, 77);
+  color: #fff;
+  border-radius: 8px;
+}
+
+#categories-aside {
+  margin-top: 5%;
+  width: 10%;
+  float: right;
+}
+
+.landing-container {
+  margin-top: 5%;
+  width: 90%;
+  display: inline-block;
+}
+
+.aside-category {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e9e9e9;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.aside-category img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  display: block;
+  background-color: #A9A9A9;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  padding: 24px 0;
+}
