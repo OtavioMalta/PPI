@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rolagem Infinita</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #dedede;
+      font-family: Helvetica;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #888;
+    }
+
+    .item {
+      background-color: white;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .item-image {
+      width: 150px;
+      height: 150px;
+      margin: 0 2rem;
+    }
+
+    .item-name {
+      font: 2em Verdana;
+      color: #888;
+    }
+
+    .item-price {
+      font: 2em Verdana;
+      color: darkgreen;
+      margin-left: 2rem;
+    }
+
+    .item-price::before {
+      content: 'R$ ';
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id="products">
+    <h2>Nossos produtos</h2>
+
+    <template id="template">
+      <div class="item">
+        <img class="item-image" src="images/{{prod-image}}"></img>
+        <span class="item-name">{{prod-name}}</span>
+        <span class="item-price">{{prod-price}}</span>
+      </div>
+    </template>
+
+  </section>
+
+  <script>
+
+    function renderProducts(newProducts) {
+
+      const prodsSection = document.getElementById("products");
+      const template = document.getElementById("template");
+
+      for (let product of newProducts) {
+        let html = template.innerHTML
+          .replace("{{prod-image}}", product.imagePath)
+          .replace("{{prod-name}}", product.name)
+          .replace("{{prod-price}}", product.price);
+
+        prodsSection.insertAdjacentHTML("beforeend", html);
+      };
+    }
+
+    async function loadProducts() {
+
+      try {
+        let response = await fetch("more-products.php");
+        if (!response.ok) throw new Error(response.statusText);
+        var products = await response.json();
+      }
+      catch (e) {
+        console.error(e);
+        return;
+      }
+
+      renderProducts(products);
+    }
+
+    window.onload = function () {
+      loadProducts();
+    }
+
+    window.onscroll = function () {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        loadProducts();
+      }
+    };
+
+  </script>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@ class RequestResponse
   function __construct($success, $detail)
   {
     $this->success = $success;
-    $this->detail =   $detail;
+    $this->detail = $detail;
   }
 }
 
