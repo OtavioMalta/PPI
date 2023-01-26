@@ -1,5 +1,4 @@
-# PPI
-## Programação para Internet - Universidade Federal de Uberlândia<br>
+# Programação para Internet - Universidade Federal de Uberlândia<br>
 Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 
 ### 1. Introdução aos sistemas Web:<br>
