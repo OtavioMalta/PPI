@@ -1,6 +1,5 @@
 # Programação para Internet - Universidade Federal de Uberlândia<br>
 
-Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 
 ### 1. Introdução aos sistemas Web:<br>
 - [x] Internet e comércio eletrônico: um resumo histórico;<br>
