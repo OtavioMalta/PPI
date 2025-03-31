@@ -1,6 +1,6 @@
 # Programação para Internet - Universidade Federal de Uberlândia<br>
 
-
+![](https://api.visitorbadge.io/api/VisitorHit?user=OtavioMaltaf&repo=PPI&countColor=%237B1E7A) <br>
 ### 1. Introdução aos sistemas Web:<br>
 - [x] Internet e comércio eletrônico: um resumo histórico;<br>
 - [x] Fundamentos da Internet: conceitos básicos, protocolos e tecnologias;<br>
