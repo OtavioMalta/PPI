@@ -1,6 +1,5 @@
 # Programação para Internet - Universidade Federal de Uberlândia<br>
 
-![](https://api.visitorbadge.io/api/VisitorHit?user=OtavioMaltaf&repo=PPI&countColor=%237B1E7A) <br>
 Trabalhos hospedados em: http://otaviomalta.infinityfreeapp.com/
 
 ### 1. Introdução aos sistemas Web:<br>
